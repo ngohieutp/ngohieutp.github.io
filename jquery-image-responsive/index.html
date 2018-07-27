@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Jquery image responsive</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>  
+    </head> 
+    <body>  
+		<style>
+			.responsive {
+			  max-width: 100%;
+			  width: 100%;
+			}
+		</style>
+		
+		<img data-src-lg="images/1920.jpg" 
+			data-src-md="images/1280.jpg" 
+			data-src-sm="images/960.jpg" 
+			data-src-xs="images/640.jpg" 
+			data-src="images/1920.jpg" 
+		class="responsive" /> 
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="jquery-image-responsive.js" ></script>
+		<script> 
+			$(function () {
+				$("img.responsive").responsive();
+			});
+		</script>
+	
+    </body>   
+</html>
