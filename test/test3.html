@@ -1,0 +1,35 @@
+<link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    select {
+        color: #009788;
+        width: 100%;
+        height: 50px;
+        border-radius: 3px;
+        background-color: #fbfbfb;
+        border: solid 1px #d8d8d8;
+        padding-left: 10px;
+        background: url(arrow_d_padright.png) right center no-repeat;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+</style>
+<select id="OptCashFlow_OverDraft">
+    <option value="100">100 Triệu</option>
+    <option value="200">200 Triệu</option>
+    <option value="300">300 Triệu</option>
+    <option value="500">500 Triệu</option>
+</select>
+<div id="OptCashFlow_OverDraft_Value"></div>
+<script src="jquery.v2.1.1.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function calculateStrategyOne(e) {
+            $("#OptCashFlow_OverDraft_Value").html($(e.target).val());
+        }
+
+        $("#OptCashFlow_OverDraft").on("change", calculateStrategyOne);
+
+    });
+</script>

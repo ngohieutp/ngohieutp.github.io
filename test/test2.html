@@ -1,0 +1,18 @@
+<select id="OptCashFlow_OverDraft">
+    <option value="100">100 Triệu</option>
+    <option value="200">200 Triệu</option>
+    <option value="300">300 Triệu</option>
+    <option value="500">500 Triệu</option>
+</select>
+<div id="OptCashFlow_OverDraft_Value"></div>
+<script src="jquery.v2.1.1.js"></script>
+<script>
+    $(document).ready(function () {
+        function calculateStrategyOne(e) {
+            $("#OptCashFlow_OverDraft_Value").html($(e.target).val());
+        }
+
+        $("#OptCashFlow_OverDraft").on("change", calculateStrategyOne);
+
+    });
+</script>
